@@ -81,4 +81,4 @@ var possibleFriends = [
     },
 ];
 
-modules.exports = possibleFriends;
+module.exports = possibleFriends;
