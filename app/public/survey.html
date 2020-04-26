@@ -7,419 +7,429 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./../assets/css/style.css">
 
     <title>Friend Finder</title>
 </head>
 
 <body>
 
-    <h3>Survey Questions</h3>
-
-    <hr>
-    <form id="surveyForm">
-        <h4>About You</h4>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Name (Required)</label>
-            <input type="text" class="form-control" id="userName" aria-describedby="emailHelp">
+    <div class="row">
+        <div class="col-md-2">
+            <!-- placeholder div -->
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Link to Photo Image (Required)</label>
-            <input type="password" class="form-control" id="userPhotoLink">
+        <div class="col-md-8">
+            <h3>Survey Questions</h3>
+            <hr>
+            <form id="surveyForm">
+                <h4>About You</h4>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Name (Required)</label>
+                    <input type="text" class="form-control" id="userName" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Link to Photo Image (Required)</label>
+                    <input type="text" class="form-control" id="userPhotoLink">
+                </div>
+                <hr>
+                <h4>Question 1</h4>
+                <p>You would rather stay in and watch tv than go out on a Friday night.</p>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownOne" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select an option
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers1" id="q1a1" value="1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                One (Strongly Disagree)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers1" id="q1a2" value="2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Two
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers1" id="q1a3" value="3">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Three
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers1" id="q1a4" value="4">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Four
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers1" id="q1a5" value="5">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Five (Strongly agree)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <h4>Question 2</h4>
+                <p>Generally speaking, you aren't thinking of anything in particular at any given moment.</p>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownTwo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select an option
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers2" id="q2a1" value="1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                One (Strongly Disagree)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers2" id="q2a2" value="2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Two
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers2" id="q2a3" value="3">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Three
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers2" id="q2a4" value="4">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Four
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers2" id="q2a5" value="5">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Five (Strongly agree)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <h4>Question 3</h4>
+                <p>You consider yourself outgoing.</p>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownThree" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select an option
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers3" id="q3a1" value="1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                One (Strongly Disagree)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers3" id="q3a2" value="2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Two
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers3" id="q3a3" value="3">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Three
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers3" id="q3a4" value="4">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Four
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers3" id="q3a5" value="5">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Five (Strongly agree)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <h4>Question 4</h4>
+                <p>On occasion, you like to have a glass of wine with dinner.</p>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownFour" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select an option
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers4" id="q4a1" value="1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                One (Strongly Disagree)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers4" id="q4a2" value="2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Two
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers4" id="q4a3" value="3">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Three
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers4" id="q4a4" value="4">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Four
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers4" id="q4a5" value="5">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Five (Strongly agree)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <h4>Question 5</h4>
+                <p>Honesty is most important, not someone else's feelings</p>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownFive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select an option
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers5" id="q5a1" value="1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                One (Strongly Disagree)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers5" id="q5a2" value="2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Two
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers5" id="q5a3" value="3">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Three
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers5" id="q5a4" value="4">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Four
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers5" id="q5a5" value="5">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Five (Strongly agree)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <h4>Question 6</h4>
+                <p>You often find yourself daydreaming.</p>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownSix" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select an option
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers6" id="q6a1" value="1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                One (Strongly Disagree)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers6" id="q6a2" value="2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Two
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers6" id="q6a3" value="3">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Three
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers6" id="q6a4" value="4">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Four
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers6" id="q6a5" value="5">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Five (Strongly agree)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <h4>Question 7</h4>
+                <p>If something starts to bore you, you set it down and never pick it back up.</p>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownSeven" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select an option
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers7" id="q7a1" value="1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                One (Strongly Disagree)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers7" id="q7a2" value="2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Two
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers7" id="q7a3" value="3">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Three
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers7" id="q7a4" value="4">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Four
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers7" id="q7a5" value="5">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Five (Strongly agree)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <h4>Question 8</h4>
+                <p>You prefer large gatherings to small, intimate ones.</p>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownEight" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select an option
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers8" id="q8a1" value="1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                One (Strongly Disagree)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers8" id="q8a2" value="2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Two
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers8" id="q8a3" value="3">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Three
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers8" id="q8a4" value="4">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Four
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers8" id="q8a5" value="5">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Five (Strongly agree)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <h4>Question 9</h4>
+                <p>Partying is your middle name.</p>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownNine" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select an option
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers9" id="q9a1" value="1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                One (Strongly Disagree)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers9" id="q9a2" value="2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Two
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers9" id="q9a3" value="3">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Three
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers9" id="q9a4" value="4">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Four
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers9" id="q9a5" value="5">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Five (Strongly agree)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <h4>Question 10</h4>
+                <p>Education is one of the most important things in life.</p>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownTen" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select an option
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers10" id="q10a1" value="1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                One (Strongly Disagree)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers10" id="q10a2" value="2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Two
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers10" id="q10a3" value="3">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Three
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers10" id="q10a4" value="4">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Four
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers10" id="q10a5" value="5">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Five (Strongly agree)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <button type="submit" class="submit" data-toggle="modal" data-target="#myModal">Submit</button>
+            </form>
         </div>
-        <hr>
-        <h4>Question 1</h4>
-        <p>You would rather stay in and watch tv than go out on a Friday night.</p>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownOne" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Select an option
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers1" id="q1a1" value="1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        One (Strongly Disagree)
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers1" id="q1a2" value="2">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Two
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers1" id="q1a3" value="3">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Three
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers1" id="q1a4" value="4">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Four
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers1" id="q1a5" value="5">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Five (Strongly agree)
-                    </label>
-                </div>
-            </div>
+        <div class="col-md-2">
+            <!-- placeholder div -->
         </div>
-        <h4>Question 2</h4>
-        <p>Generally speaking, you aren't thinking of anything in particular at any given moment.</p>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownTwo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Select an option
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers2" id="q2a1" value="1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        One (Strongly Disagree)
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers2" id="q2a2" value="2">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Two
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers2" id="q2a3" value="3">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Three
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers2" id="q2a4" value="4">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Four
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers2" id="q2a5" value="5">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Five (Strongly agree)
-                    </label>
-                </div>
-            </div>
-        </div>
-        <h4>Question 3</h4>
-        <p>You consider yourself outgoing.</p>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownThree" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Select an option
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers3" id="q3a1" value="1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        One (Strongly Disagree)
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers3" id="q3a2" value="2">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Two
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers3" id="q3a3" value="3">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Three
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers3" id="q3a4" value="4">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Four
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers3" id="q3a5" value="5">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Five (Strongly agree)
-                    </label>
-                </div>
-            </div>
-        </div>
-        <h4>Question 4</h4>
-        <p>On occasion, you like to have a glass of wine with dinner.</p>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownFour" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Select an option
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers4" id="q4a1" value="1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        One (Strongly Disagree)
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers4" id="q4a2" value="2">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Two
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers4" id="q4a3" value="3">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Three
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers4" id="q4a4" value="4">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Four
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers4" id="q4a5" value="5">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Five (Strongly agree)
-                    </label>
-                </div>
-            </div>
-        </div>
-        <h4>Question 5</h4>
-        <p>Honesty is most important, not someone else's feelings</p>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownFive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Select an option
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers5" id="q5a1" value="1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        One (Strongly Disagree)
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers5" id="q5a2" value="2">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Two
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers5" id="q5a3" value="3">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Three
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers5" id="q5a4" value="4">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Four
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers5" id="q5a5" value="5">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Five (Strongly agree)
-                    </label>
-                </div>
-            </div>
-        </div>
-        <h4>Question 6</h4>
-        <p>You often find yourself daydreaming.</p>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownSix" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Select an option
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers6" id="q6a1" value="1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        One (Strongly Disagree)
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers6" id="q6a2" value="2">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Two
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers6" id="q6a3" value="3">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Three
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers6" id="q6a4" value="4">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Four
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers6" id="q6a5" value="5">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Five (Strongly agree)
-                    </label>
-                </div>
-            </div>
-        </div>
-        <h4>Question 7</h4>
-        <p>If something starts to bore you, you set it down and never pick it back up.</p>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownSeven" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Select an option
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers7" id="q7a1" value="1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        One (Strongly Disagree)
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers7" id="q7a2" value="2">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Two
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers7" id="q7a3" value="3">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Three
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers7" id="q7a4" value="4">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Four
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers7" id="q7a5" value="5">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Five (Strongly agree)
-                    </label>
-                </div>
-            </div>
-        </div>
-        <h4>Question 8</h4>
-        <p>You prefer large gatherings to small, intimate ones.</p>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownEight" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Select an option
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers8" id="q8a1" value="1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        One (Strongly Disagree)
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers8" id="q8a2" value="2">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Two
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers8" id="q8a3" value="3">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Three
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers8" id="q8a4" value="4">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Four
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers8" id="q8a5" value="5">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Five (Strongly agree)
-                    </label>
-                </div>
-            </div>
-        </div>
-        <h4>Question 9</h4>
-        <p>Partying is your middle name.</p>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownNine" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Select an option
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers9" id="q9a1" value="1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        One (Strongly Disagree)
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers9" id="q9a2" value="2">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Two
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers9" id="q9a3" value="3">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Three
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers9" id="q9a4" value="4">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Four
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers9" id="q9a5" value="5">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Five (Strongly agree)
-                    </label>
-                </div>
-            </div>
-        </div>
-        <h4>Question 10</h4>
-        <p>Education is one of the most important things in life.</p>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownTen" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Select an option
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers10" id="q10a1" value="1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        One (Strongly Disagree)
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers10" id="q10a2" value="2">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Two
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers10" id="q10a3" value="3">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Three
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers10" id="q10a4" value="4">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Four
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="answers10" id="q10a5" value="5">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Five (Strongly agree)
-                    </label>
-                </div>
-            </div>
-        </div>
-        <br>
-        <button type="submit" class="submit" data-toggle="modal" data-target="#myModal">Submit</button>
-    </form>
+    </div>
 
     <div class="modal" tabindex="-1" id="myModal" role="dialog">
         <div class="modal-dialog" role="document">
