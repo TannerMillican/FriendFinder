@@ -25,7 +25,7 @@ module.exports = function(app) {
             var totalDifference = 0;
 
             var differences = possibleFriendsScoreArr.map(function(item, index){
-                return item - userScoreArr[index]
+                return Math.abs(item - userScoreArr[index])
             })
             for (var j = 0; j < differences.length; j++){
                 totalDifference += differences[j]

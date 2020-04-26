@@ -431,7 +431,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p></p>
+
                 </div>
             </div>
         </div>
@@ -449,57 +449,57 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-    
-
     <script type="text/javascript">
 
-$(".submit, #myModal").on("click", function(){
-    var answers = [];
+        function showModal(){
+            $('#myModal').modal('show') 
+        }
 
-    var answer1 = $("input[type='radio'][name='answers1']:checked").val();
-    var answer2 = $("input[type='radio'][name='answers2']:checked").val();
-    var answer3 = $("input[type='radio'][name='answers3']:checked").val();
-    var answer4 = $("input[type='radio'][name='answers4']:checked").val();
-    var answer5 = $("input[type='radio'][name='answers5']:checked").val();
-    var answer6 = $("input[type='radio'][name='answers6']:checked").val();
-    var answer7 = $("input[type='radio'][name='answers7']:checked").val();
-    var answer8 = $("input[type='radio'][name='answers7']:checked").val();
-    var answer9 = $("input[type='radio'][name='answers9']:checked").val();
-    var answer10 = $("input[type='radio'][name='answers10']:checked").val();
-    answers.push(answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10);
-    console.log(answers);
+        $(".submit").on("click", function(){
+            var answers = [];
 
-    var newPossibleFriend = {
-        possibleFriendName: $("#userName").val().trim(),
-        possibleFriendPhoto: $("#userPhotoLink").val().trim(),
-        scores: answers,
-    }    
+            var answer1 = $("input[type='radio'][name='answers1']:checked").val();
+            var answer2 = $("input[type='radio'][name='answers2']:checked").val();
+            var answer3 = $("input[type='radio'][name='answers3']:checked").val();
+            var answer4 = $("input[type='radio'][name='answers4']:checked").val();
+            var answer5 = $("input[type='radio'][name='answers5']:checked").val();
+            var answer6 = $("input[type='radio'][name='answers6']:checked").val();
+            var answer7 = $("input[type='radio'][name='answers7']:checked").val();
+            var answer8 = $("input[type='radio'][name='answers7']:checked").val();
+            var answer9 = $("input[type='radio'][name='answers9']:checked").val();
+            var answer10 = $("input[type='radio'][name='answers10']:checked").val();
+            answers.push(answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10);
+            console.log(answers);
 
-    var currentURL = window.location.origin;
-    console.log(currentURL)
+            var newPossibleFriend = {
+                possibleFriendName: $("#userName").val().trim(),
+                possibleFriendPhoto: $("#userPhotoLink").val().trim(),
+                scores: answers,
+            }    
 
-    $.post(currentURL + "/api/friends", newPossibleFriend, function(res){
-        console.log(res)
+            var currentURL = window.location.origin;
+            console.log(currentURL)
 
-        var newfriendDiv = $("<div>");
+            $.post(currentURL + "/api/friends", newPossibleFriend, function(res){
+                console.log(res)
 
-        var friendName = $("<p>");
-        friendName.text(res.name);
+                var friendName = $("<p>");
+                friendName.text(res.name);
 
-        var friendPhoto = $("<img>");
-        friendPhoto.attr("src", res.photo);
+                var friendPhoto = $("<img>");
+                friendPhoto.attr("src", res.photo);
 
-        newfriendDiv.append(friendName);
-        newfriendDiv.append(friendPhoto);
+                $(".modal-body").append(friendName)
+                $(".modal-body").append(friendPhoto)
 
-        $(".modal-body").append(newfriendDiv)
+                showModal()
 
-    });
+            });
 
 
 
-    return false;
-});
+            return false;
+        });
     </script>
 </body>
 
