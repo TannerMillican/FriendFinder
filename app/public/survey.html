@@ -423,7 +423,7 @@
                     </div>
                 </div>
                 <br>
-                <button type="submit" class="submit" data-toggle="modal" data-target="#myModal">Submit</button>
+                <button type="submit" id="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Submit</button>
             </form>
         </div>
         <div class="col-md-2">
@@ -465,7 +465,7 @@
             $('#myModal').modal('show') 
         }
 
-        $(".submit").on("click", function(){
+        $("#submit").on("click", function(){
             var answers = [];
 
             var answer1 = $("input[type='radio'][name='answers1']:checked").val();
@@ -498,6 +498,8 @@
 
                 var friendPhoto = $("<img>");
                 friendPhoto.attr("src", res.photo);
+                friendPhoto.css("max-width", "350px");
+                friendPhoto.css("height", "auto")
 
                 $(".modal-body").append(friendName)
                 $(".modal-body").append(friendPhoto)
