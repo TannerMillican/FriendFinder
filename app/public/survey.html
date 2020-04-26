@@ -421,6 +421,22 @@
         <button type="submit" class="submit" data-toggle="modal" data-target="#myModal">Submit</button>
     </form>
 
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Your suggested friend is:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script
         src="https://code.jquery.com/jquery-3.5.0.min.js"
@@ -457,57 +473,26 @@ $(".submit, #myModal").on("click", function(){
         possibleFriendName: $("#userName").val().trim(),
         possibleFriendPhoto: $("#userPhotoLink").val().trim(),
         scores: answers,
-    }
-
-    // console.log(newPossibleFriend)
-    
+    }    
 
     var currentURL = window.location.origin;
     console.log(currentURL)
 
     $.post(currentURL + "/api/friends", newPossibleFriend, function(res){
+        console.log(res)
 
-        // var modalDiv = $("<div>");
-        
-        // modalDiv.attr("id", myModal);
-        // modalDiv.attr("role", "dialog");
+        var newfriendDiv = $("<div>");
 
-        // var modalDialog = $("<div>");
-        // modalDialog.addClass("modal-dialog");
+        var friendName = $("<p>");
+        friendName.text(res.name);
 
-        // var modalContent = $("<div>");
-        // modalContent.addClass("modal-content");
+        var friendPhoto = $("<img>");
+        friendPhoto.attr("src", res.photo);
 
-        // var modalHeader = $("<div>");
-        // modalHeader.addClass("modal-header");
+        newfriendDiv.append(friendName);
+        newfriendDiv.append(friendPhoto);
 
-        // var modalCloseButton = $("<button>");
-        // modalCloseButton.attr("type", "button");
-        // modalCloseButton.addClass("close");
-        // modalCloseButton.attr("data-dismiss", "modal");
-        // modalCloseButton.text("&times");
-
-        // var modalTitle = $("<h2>");
-        // modalTitle.addClass("modal-title");
-        // modalTitle.text("Your new friend is:" + res.name)
-
-        // modalContent.append(modalHeader);
-        // modalContent.append(modalCloseButton);
-        // modalContent.append(modalTitle);
-
-        // var modalBody = $("<div>");
-        // modalBody.addClass("modal-body");
-
-        // var modalImage = $("<img>");
-        // modalImage.attr("src", res.photo);
-
-        // modalBody.append(modalImage);
-
-        // modalDialog.append(modalContent);
-        // modalDialog.append(modalBody);
-
-        // modalDiv.append(modalDialog)
-        // $("#surveyForm").append(modalDiv)
+        $(".modal-body").append(newfriendDiv)
 
     });
 

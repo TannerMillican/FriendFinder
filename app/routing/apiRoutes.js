@@ -10,13 +10,13 @@ module.exports = function(app) {
 
 
     app.post('/api/friends', function(req, res){
-        // console.log(req)
-        // console.log(res)
+
+        friendsData.push(req.body)
 
         var differencesArr = [];
         var compatableFriend
 
-        for (var i = 0; i < friendsData.length; i++){
+        for (var i = 0; i < friendsData.length - 1; i++){
 
             var possibleFriendsScoreArr = friendsData[i].scores;
 
@@ -33,10 +33,7 @@ module.exports = function(app) {
             differencesArr.push(totalDifference)
         }
 
-        console.log(differencesArr)
-
         var minDifference = Math.min(...differencesArr)
-        console.log(minDifference)
 
         var differenceIndex;
 
@@ -46,9 +43,6 @@ module.exports = function(app) {
             }
         }
 
-
-        // console.log(compatableFriend)
-
         for (var i = 0; i < friendsData.length; i++){
 
             var friendIndex = friendsData[differenceIndex];
@@ -56,8 +50,9 @@ module.exports = function(app) {
             compatableFriend = friendIndex
 
         }
-        res = compatableFriend
-        console.log(res)
+        console.log(compatableFriend)
+        res.json(compatableFriend)
+
     });
 
     app.get("/", function(req, res) {
