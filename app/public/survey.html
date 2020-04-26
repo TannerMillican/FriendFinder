@@ -431,7 +431,7 @@
         </div>
     </div>
 
-    <div class="modal" tabindex="-1" id="myModal" role="dialog">
+    <div class="modal" data-backdrop="static" tabindex="-1" id="myModal" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -462,7 +462,7 @@
     <script type="text/javascript">
 
         function showModal(){
-            $('#myModal').modal('show') 
+            $('#myModal').modal('show'); 
         }
 
         $("#submit").on("click", function(){
@@ -479,7 +479,6 @@
             var answer9 = $("input[type='radio'][name='answers9']:checked").val();
             var answer10 = $("input[type='radio'][name='answers10']:checked").val();
             answers.push(answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10);
-            console.log(answers);
 
             var newPossibleFriend = {
                 possibleFriendName: $("#userName").val().trim(),
@@ -488,10 +487,8 @@
             }    
 
             var currentURL = window.location.origin;
-            console.log(currentURL)
 
             $.post(currentURL + "/api/friends", newPossibleFriend, function(res){
-                console.log(res)
 
                 var friendName = $("<p>");
                 friendName.text(res.name);
@@ -508,10 +505,14 @@
 
             });
 
-
+            $(".close").on("click", function(){
+                location.reload()
+            })
 
             return false;
         });
+
+        
     </script>
 </body>
 

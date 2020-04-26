@@ -50,7 +50,7 @@ module.exports = function(app) {
             compatableFriend = friendIndex
 
         }
-        console.log(compatableFriend)
+
         res.json(compatableFriend)
 
     });

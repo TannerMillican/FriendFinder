@@ -33,7 +33,7 @@ var possibleFriends = [
     },
     {
         "name":"Jimothy",
-        "photo":"https://lh3.googleusercontent.com/proxy/_9ISejRC0oELi_Xsjkn8p1ti_89f9f-a04FyQSzC3dPBCeJA8GSp1Wf0S7xaqf893bFGl6ciZrqXnR0Nm-Y2rD31zvUNuHzhkiVIU1p4bI-Ui9fvqygN9qPfWjpwk29bZyiE7RK5kj9C1W-EGoiy9S7AMg_Bt7w",
+        "photo":"https://lh3.googleusercontent.com/proxy/BrCuAnv730b2k_y1TAqDeN3OdtWB0QfGH3UQHSP9OHgZavrcks6an7Pp44B4IdoqxGPd2ri6lqUznZqVewnsFXg_XmFHDYk52EqAvMS8DdSWJaQABCslsTDwTzD-Ck2PZR9QPGmLHlLJsaxRAN_658Mfu_-uEvAk",
         "scores":[
             4,
             5,
