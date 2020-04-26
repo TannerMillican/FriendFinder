@@ -16,7 +16,7 @@
     <h3>Survey Questions</h3>
 
     <hr>
-    <form>
+    <form id="surveyForm">
         <h4>About You</h4>
         <div class="form-group">
             <label for="exampleInputEmail1">Name (Required)</label>
@@ -418,7 +418,7 @@
             </div>
         </div>
         <br>
-        <button type="submit" class="submit">Submit</button>
+        <button type="submit" class="submit" data-toggle="modal" data-target="#myModal">Submit</button>
     </form>
 
 
@@ -437,44 +437,84 @@
 
     <script type="text/javascript">
 
-        // function getPossibleFriendsData() {
-        //     var currentURL = window.location.origin;
-        
-        //     $.ajax({url: currentURL + "/api/friends", method: "GET"})
-        
-        //         .done(function(friendsData){
-        
-        //             console.log("--------------------");
-        //             console.log("URL: " + currentURL + "/api/friends");
-        //             console.log(friendsData)
-        //         });
-        // }
-        
-        // getPossibleFriendsData();
-        $(".submit").on("click", function(){
-            var answers = [];
+$(".submit, #myModal").on("click", function(){
+    var answers = [];
 
-            var answer1 = $("input[type='radio'][name='answers1']:checked").val();
-            var answer2 = $("input[type='radio'][name='answers2']:checked").val();
-            var answer3 = $("input[type='radio'][name='answers3']:checked").val();
-            var answer4 = $("input[type='radio'][name='answers4']:checked").val();
-            var answer5 = $("input[type='radio'][name='answers5']:checked").val();
-            var answer6 = $("input[type='radio'][name='answers6']:checked").val();
-            var answer7 = $("input[type='radio'][name='answers7']:checked").val();
-            var answer8 = $("input[type='radio'][name='answers7']:checked").val();
-            var answer9 = $("input[type='radio'][name='answers9']:checked").val();
-            var answer10 = $("input[type='radio'][name='answers10']:checked").val();
-            answers.push(answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10)
-            console.log(answers)
+    var answer1 = $("input[type='radio'][name='answers1']:checked").val();
+    var answer2 = $("input[type='radio'][name='answers2']:checked").val();
+    var answer3 = $("input[type='radio'][name='answers3']:checked").val();
+    var answer4 = $("input[type='radio'][name='answers4']:checked").val();
+    var answer5 = $("input[type='radio'][name='answers5']:checked").val();
+    var answer6 = $("input[type='radio'][name='answers6']:checked").val();
+    var answer7 = $("input[type='radio'][name='answers7']:checked").val();
+    var answer8 = $("input[type='radio'][name='answers7']:checked").val();
+    var answer9 = $("input[type='radio'][name='answers9']:checked").val();
+    var answer10 = $("input[type='radio'][name='answers10']:checked").val();
+    answers.push(answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10);
+    console.log(answers);
 
-            var newPossibleFriend = {
-                possibleFriendName: $("#userName").val().trim(),
-                possibleFriendPhoto: $("#userPhotoLink").val().trim(),
-                scores: answers,
-            }
+    var newPossibleFriend = {
+        possibleFriendName: $("#userName").val().trim(),
+        possibleFriendPhoto: $("#userPhotoLink").val().trim(),
+        scores: answers,
+    }
 
-            console.log(newPossibleFriend)
-        })
+    // console.log(newPossibleFriend)
+    
+
+    var currentURL = window.location.origin;
+    console.log(currentURL)
+
+    $.post(currentURL + "/api/friends", newPossibleFriend, function(res){
+
+        // var modalDiv = $("<div>");
+        
+        // modalDiv.attr("id", myModal);
+        // modalDiv.attr("role", "dialog");
+
+        // var modalDialog = $("<div>");
+        // modalDialog.addClass("modal-dialog");
+
+        // var modalContent = $("<div>");
+        // modalContent.addClass("modal-content");
+
+        // var modalHeader = $("<div>");
+        // modalHeader.addClass("modal-header");
+
+        // var modalCloseButton = $("<button>");
+        // modalCloseButton.attr("type", "button");
+        // modalCloseButton.addClass("close");
+        // modalCloseButton.attr("data-dismiss", "modal");
+        // modalCloseButton.text("&times");
+
+        // var modalTitle = $("<h2>");
+        // modalTitle.addClass("modal-title");
+        // modalTitle.text("Your new friend is:" + res.name)
+
+        // modalContent.append(modalHeader);
+        // modalContent.append(modalCloseButton);
+        // modalContent.append(modalTitle);
+
+        // var modalBody = $("<div>");
+        // modalBody.addClass("modal-body");
+
+        // var modalImage = $("<img>");
+        // modalImage.attr("src", res.photo);
+
+        // modalBody.append(modalImage);
+
+        // modalDialog.append(modalContent);
+        // modalDialog.append(modalBody);
+
+        // modalDiv.append(modalDialog)
+        // $("#surveyForm").append(modalDiv)
+
+    });
+
+
+
+    return false;
+});
     </script>
 </body>
 
